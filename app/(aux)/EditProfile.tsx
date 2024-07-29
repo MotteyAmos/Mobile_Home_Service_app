@@ -116,7 +116,7 @@ const EditProfile = (props: EditProfileProps) => {
               <Ionicons name="lock-closed-outline" size={22} color="#083344" />
               <TextInput
                 style={{
-
+               
                 }}
                 onChangeText={setPassword}
                 value={password}

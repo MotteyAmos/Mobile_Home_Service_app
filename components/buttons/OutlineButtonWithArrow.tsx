@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Button, Animated, Pressable } from 'react-native';
+import { Text, View, StyleSheet, Button, Animated, Pressable, Easing } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { Link, router } from "expo-router"
-
+import { MotiView, MotiText } from 'moti'
 
 interface OutLineButtonWithArrowProps {
-    title: string
+    title: string,
+    href:string
 }
 
 const OutLineButtonWithArrow = (props: OutLineButtonWithArrowProps) => {
@@ -18,7 +19,7 @@ const OutLineButtonWithArrow = (props: OutLineButtonWithArrowProps) => {
             Animated.timing(translateXValue, {
                 toValue: 10, // Move to the right (adjust as needed)
                 duration: 1500, // Animation duration in milliseconds
-                easing: Animated.easeInOutExpo,
+                easing: Easing.inOut(Easing.ease),
                 useNativeDriver: false
             }),
             { iterations: Infinity } // Repeat indefinitely
@@ -38,9 +39,13 @@ const OutLineButtonWithArrow = (props: OutLineButtonWithArrowProps) => {
         },
         styles.container
         ]}
-            onPress={() =>[ setChangeNextText(true), router.replace("/Home")]}
+            onPress={() =>[ setChangeNextText(true), 
+                router.replace(props.href)
+            ]}
             onPressOut={() => setChangeNextText(false)}
+       
         >
+
             <Text
                 style={[{
                         
@@ -49,7 +54,7 @@ const OutLineButtonWithArrow = (props: OutLineButtonWithArrowProps) => {
 
             <View style={{ alignItems: "center", justifyContent: "center" }}>
                 <Animated.View style={{ transform: [{ translateX: translateXValue }], justifyContent: "center", alignContent: "center" }}>
-                    <Icon name="arrowright" size={27} style={{ flex: 0 }} color="#083344" />
+                    <Icon name="arrowright" size={27} style={{ flex: 0 }} color = {!chageNextText ? "#083344" :"#fff"} />
                 </Animated.View>
             </View>
 

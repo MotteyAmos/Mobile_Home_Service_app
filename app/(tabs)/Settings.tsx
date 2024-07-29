@@ -56,6 +56,28 @@ const Settings = (props: SettingsProps) => {
         </View>
       </Pressable>
 
+      <Pressable onPress={()=>router.push("/(aux)/BecomeWorker/PersonalInfo")}>
+        <View style={{ paddingVertical: 20 }}>
+          <View
+            style={{
+              flex: 0,
+              alignItems: "center",
+              flexDirection: "row",
+              paddingHorizontal: 20,
+              gap: 10
+            }}
+          >
+            <MaterialIcons name="engineering" size={22} color="#083344" />
+            <View>
+              <Text style={{ fontFamily: "", fontSize: 15, fontWeight: "600" }}>Become a worker</Text>
+              <Text style={{ color: "#64748B", fontSize: 12 }}>Complete your profile to start rendering services</Text>
+            </View>
+          </View>
+
+          <View style={{ height: 0.5, width: "100%", backgroundColor: "white" }}></View>
+        </View>
+      </Pressable>
+
 
       <Pressable>
         <View style={{ paddingVertical: 20 }}>
@@ -137,8 +159,8 @@ const Settings = (props: SettingsProps) => {
           >
             <MaterialCommunityIcons name="delete-outline" size={22} color="#083344" />
             <View>
-              <Text style={{ fontFamily: "", fontSize: 15, fontWeight: "600" }}>Delete Account</Text>
-              <Text style={{ color: "#64748B", fontSize: 12 }}>Don't want to use this account anymore? Delete it</Text>
+              <Text style={{ fontFamily: "", fontSize: 15, fontWeight: "600", color:"#ef4444" }}>Delete Account</Text>
+              <Text style={{ color: "#ef4444", fontSize: 12 }}>Don't want to use this account anymore? Delete it</Text>
             </View>
           </View>
 

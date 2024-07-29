@@ -6,6 +6,10 @@ import { useRouter } from "expo-router";
 import { Image } from 'expo-image';
 
 
+// for now expo router does not have any means of hidden the tab bar programatically and I don't want the tab bar to
+// be visible on this page
+// so I decided to move this file here
+
 interface MessageCardProps {
     data: {
         name: string,
@@ -21,7 +25,7 @@ const MessageCard = (props: MessageCardProps) => {
         const router = useRouter();
 
     return (
-        <Pressable onPress={()=>{router.push("/service/Message")}}>
+        <Pressable onPress={()=>{router.push("/Message/Message")}}>
             <View style={styles.container}>
                 <View style={{
                     display: "flex",

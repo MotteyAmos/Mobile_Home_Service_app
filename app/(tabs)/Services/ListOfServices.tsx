@@ -40,7 +40,7 @@ const ListOfServices = (props: MessageProps) => {
       {
        service_data.map((value, index)=>{
      
-      return  <ServiceCard data={value}/>
+      return  <ServiceCard data={value} key={index}/>
         })
       }
    
@@ -76,6 +76,6 @@ marginHorizontal:16,
     marginHorizontal: 16,
     alignItems: "center",
     paddingLeft: 12,
-    marginBottom:16
+    marginBottom:8
   }
 });

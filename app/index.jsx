@@ -1,9 +1,11 @@
 import { View, Text, Pressable, Button, StyleSheet, Animated } from "react-native";
 import { Image } from 'expo-image';
 import OutLineButtonWithArrow from "../components/buttons/OutlineButtonWithArrow"
+import {useRouter} from "expo-router";
 
-export default function Home() {
 
+export default function WelcomePage() {
+    const router = useRouter();
 
     return (
         <View style={{ paddingTop: 50, backgroundColor: "white", flex: 1 }}>

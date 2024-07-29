@@ -7,6 +7,7 @@ interface NotificationProps { }
 
 const Notification = (props: NotificationProps) => {
     const insets = useSafeAreaInsets();
+    
     return (
 
         <View style={[styles.container]}>
@@ -18,7 +19,10 @@ const Notification = (props: NotificationProps) => {
                 {
                     noficationCard_data.map((value, index) => {
                         return (
-                            <NotificationCard data={value} />
+                            <View>
+                                <NotificationCard data={value} key={index} />
+
+                            </View>
 
                         )
                     })
@@ -37,11 +41,11 @@ export default Notification;
 
 const styles = StyleSheet.create({
     container: {
-
+            flex:1
     },
     scrollStyle: {
-      height:90,
-  paddingVertical:10
-  
+        height: 90,
+        paddingVertical: 10
+
     },
 });

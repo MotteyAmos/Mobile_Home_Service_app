@@ -8,12 +8,12 @@ import EvilIcons from "@expo/vector-icons/EvilIcons";
 import HomeCarousel from '@/components/serviceComponents/HomeCarousel';
 import MostBookService from '@/components/serviceComponents/MostBookService';
 import ServiceBySection from '@/components/serviceComponents/ServiceBySection';
-import { Salon_Spa_data, handyman_Mantainance_data,health_care_data,Pest_control_data } from '@/data/data';
+import { Salon_Spa_data, handyman_Mantainance_data, health_care_data, Pest_control_data } from '@/data/data';
 
 interface servicesProps { }
 
 
-
+// add payment 
 
 
 
@@ -24,12 +24,12 @@ const Services = (props: servicesProps) => {
   const insets = useSafeAreaInsets();
   return (
     <View style={[styles.container,]}>
-      <View style={{height:657}}>
+      <View style={{ height: 657 }}>
         <ScrollView style={styles.scrollStyle}
-        disableScrollViewPanResponder = {true}
-        keyboardDismissMode="on-drag"
-        showsVerticalScrollIndicator={false}
-       
+          disableScrollViewPanResponder={true}
+          keyboardDismissMode="on-drag"
+          showsVerticalScrollIndicator={false}
+
         >
           <View style={[styles.textInput, { borderWidth: 1, borderColor: searchBorder ? "#BAE6FD" : "#F8FAFC" }]}>
             <EvilIcons name="search" size={30} color="#083344" />
@@ -42,7 +42,7 @@ const Services = (props: servicesProps) => {
               inputMode='search'
               onBlur={() => setSearchBorder(false)}
               onFocus={() => setSearchBorder(true)}
-             
+
             />
           </View>
           <View style={
@@ -87,8 +87,8 @@ const styles = StyleSheet.create({
     flex: 1
   },
   scrollStyle: {
-    height:90,
-paddingVertical:10
+    height: 90,
+    paddingVertical: 10
 
   },
   textInput: {
@@ -101,6 +101,6 @@ paddingVertical:10
     marginHorizontal: 16,
     alignItems: "center",
     paddingLeft: 12,
-    marginBottom:16
+    marginBottom: 16
   }
 });
