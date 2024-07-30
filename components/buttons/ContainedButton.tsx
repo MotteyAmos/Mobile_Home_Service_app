@@ -13,9 +13,9 @@ const ContainedButton = (props: ContainedButtonProps) => {
         }
         activeOpacity={0.8}
         
-        onPress={()=>{[router.push("/service/Message")]}}
+        onPress={()=>{[router.push("/(aux)/Message/Message")]}}
     >
-        <Text style={styles.text}>Chart</Text>
+        <Text style={styles.text}>Chat</Text>
     </TouchableOpacity>
   );
 };

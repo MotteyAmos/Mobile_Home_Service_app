@@ -12,7 +12,7 @@ const Profile = (props: ProfileProps) => {
   const [messageValue, setMessageValue] = useState<string>("");
   const [inputBorder, setInputBorder] = useState<boolean>(false);
   return (
-    <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined} keyboardVerticalOffset={60} >
+    <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : "height"} keyboardVerticalOffset={60} >
     <View style={styles.container}>
       <View style={{
         flex:8,

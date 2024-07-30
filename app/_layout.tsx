@@ -73,7 +73,7 @@ export default function RootLayout() {
             <Stack.Screen name="index" options={{ headerShown: false }} />
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="notification" options={{ headerShown: true, headerTitle: () => <Title /> }} />
-            <Stack.Screen name="Message/Message" options={{ title: "Yao" }} />
+            <Stack.Screen name="(aux)/Message/Message" options={{ title: "Yao" }} />
             <Stack.Screen name="(aux)/EditProfile" options={{ title: "Edit Profile" }} />
             <Stack.Screen name="(aux)/BecomeWorker/PersonalInfo" options={{ title: "Personal Infomation" }} />
             <Stack.Screen name="(aux)/BecomeWorker/ProfessionalInfo" options={{ title: "Professional Infomation" }} />

@@ -6,6 +6,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons"
 import Ionicons from "@expo/vector-icons/Ionicons";
+import AntDesign from "@expo/vector-icons/AntDesign"
 import {  useNavigation,usePathname} from "expo-router";
 import {
   SafeAreaProvider,
@@ -98,12 +99,12 @@ export default function TabLayout() {
           }}
         />
         <Tabs.Screen
-          name="Worker"
+          name="Post"
           options={{
-            title: 'Worker',
+            title: 'Post',
             tabBarIcon: ({ color, focused }) => (
               // <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-              <Ionicons name={focused ? 'construct-sharp' : 'construct-outline'} size={30} color="#083344" />
+              <AntDesign name={focused ? 'plussquare' : 'plussquareo'} size={30} color="#083344" />
             ),
           }}
         />

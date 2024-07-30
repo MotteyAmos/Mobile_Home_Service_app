@@ -5,19 +5,24 @@ import { Image } from 'expo-image'
 import Feather from '@expo/vector-icons/Feather'
 import { TabView, SceneMap } from 'react-native-tab-view';
 import ViewPagerAdapter from 'react-native-tab-view-viewpager-adapter';
-import ProfileTabViewPager from '@/components/serviceComponents/ProfileTabViewPager'
+import ProfileTabViewPager from '@/components/serviceComponents/workerProfile/ProfileTabViewPager'
 
-export default class WorkerProfile extends Component {
+export default function WorkerProfile() {
 
-    render() {
+
         return (
             <View style={{ flex: 1 }}>
-                <ScrollView style={{ backgroundColor: "white", gap: 8, height: Dimensions.get("window").height }}>
+                <ScrollView style={{ backgroundColor: "white", gap: 8, 
+                    height: Dimensions.get("window").height,
+                    // flex:1
+                    
+                     }}>
                     <View style={{
-                        height: Dimensions.get("window").height
+                        // height: Dimensions.get("window").height
+                        flex:1
                     }}>
                         <View style={{
-                            height: "20%",
+                            height: "8%",
                             position: "relative"
                         }}>
 
@@ -80,10 +85,14 @@ export default class WorkerProfile extends Component {
 
                             </View>
                         </View>
+
+                    
+                        
                         <View style={{ flex: 6 , marginTop:24}}>
                             <ProfileTabViewPager />
 
-                        </View>
+                        </View>   
+                     
                     </View>
 
                 </ScrollView>
@@ -91,4 +100,4 @@ export default class WorkerProfile extends Component {
             </View>
         )
     }
-}
+
