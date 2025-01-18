@@ -40,7 +40,7 @@ export default function WelcomePage() {
 
             <View style={{ width: "100%", position: "absolute", bottom: 50, flex: 0, alignItems: "flex-end", paddingRight: 16 }}>
              
-                    <OutLineButtonWithArrow title="Next" href="Home"/>
+                    <OutLineButtonWithArrow title="Next" href="(auth)/SignIn"/>
 
             </View>
 

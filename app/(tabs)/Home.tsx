@@ -8,6 +8,12 @@ import EvilIcons from "@expo/vector-icons/EvilIcons";
 import PostCard from '@/components/home/PostCard';
 
 
+const  carpenter1 = require("../../assets/images/carpenter.webp");
+const homeNurse = require("../../assets/images/home_nurse_1.jpeg")
+const ladyHair = require("../../assets/images/lady_hair_dress.jpeg")
+const lundry = require("../../assets/images/laundry2.jpeg")
+const nail = require("../../assets/images/nail_care.jpeg")
+
 interface HomeProps { }
 
 
@@ -46,15 +52,15 @@ const Home = (props: HomeProps) => {
         >
 
 
-          <PostCard />
-          <PostCard />
+          <PostCard  img={carpenter1} name="Kofi Baboni" job="Carpenter" profile={carpenter1}/>
+          <PostCard img={homeNurse} name="Mavis" job="Nurse" profile={homeNurse}/>
 
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
+          <PostCard img={ladyHair} name="Sarah" job="Hair Dresser" profile={ladyHair}/>
+          <PostCard img={lundry} name="Mary" job="Laundry" profile={lundry}/>
+          <PostCard img={nail} name="Margaret" job="nail technician" profile={nail}/>
+          {/* <PostCard img={carpenter1} name="Kofi Baboni" job="Carpenter"/>
+          <PostCard img={carpenter1} name="Kofi Baboni" job="Carpenter"/>
+          <PostCard img={carpenter1} name="Kofi Baboni" job="Carpenter"/> */}
 
         </ScrollView>
       </View>

@@ -1,8 +1,6 @@
 import { Tabs,useRouter } from 'expo-router';
 import React from 'react';
 
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons"
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -18,7 +16,6 @@ import { useEffect, useState } from 'react';
 
 export default function TabLayout() {
   const [serviceHeaderShown, setServiceHeaderShown] = useState<boolean>(true)
-  const colorScheme = useColorScheme();
   const router = useRouter();
 
   const navigation = useNavigation();
@@ -53,7 +50,7 @@ export default function TabLayout() {
       />
       <Tabs
         screenOptions={{
-          tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+          tabBarActiveTintColor: "white",
           headerShown: true,
           headerTitle:()=><Title/>,
           headerRight:()=><Pressable onPress={()=>router.push("/notification")}><View style={{ marginRight:16}}><View style={{width:8, height: 8, backgroundColor:"#ef4444",position:"absolute", borderRadius:50,right:5}}></View><Ionicons name="notifications-outline" size={27} color="#083344" /></View></Pressable>,

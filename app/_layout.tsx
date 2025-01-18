@@ -1,4 +1,4 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+
 import { useState, useEffect } from 'react';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
@@ -8,9 +8,6 @@ import * as Font from 'expo-font';
 import 'react-native-reanimated'
 import 'react-native-gesture-handler'
 
-import { AutocompleteDropdownContextProvider } from 'react-native-autocomplete-dropdown'
-
-import { useColorScheme } from '@/hooks/useColorScheme';
 import {
   SafeAreaProvider,
   SafeAreaView,
@@ -24,7 +21,7 @@ import { Pressable, View, StatusBar } from 'react-native';
 
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
+
 
 
   useEffect(() => {
@@ -58,8 +55,8 @@ export default function RootLayout() {
     return null
   }
   return (
-    <ThemeProvider value={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
-      <AutocompleteDropdownContextProvider>
+    
+   
         <SafeAreaProvider style={{ flex: 1 }}>
           <StatusBar
             animated={true}
@@ -85,8 +82,7 @@ export default function RootLayout() {
           </Stack>
         </SafeAreaProvider>
 
-      </AutocompleteDropdownContextProvider>
+     
 
-    </ThemeProvider>
   );
 }
