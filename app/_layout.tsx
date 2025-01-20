@@ -68,6 +68,8 @@ export default function RootLayout() {
           />
           <Stack>
             <Stack.Screen name="index" options={{ headerShown: false }} />
+            <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="notification" options={{ headerShown: true, headerTitle: () => <Title /> }} />
             <Stack.Screen name="(aux)/Message/Message" options={{ title: "Yao" }} />
@@ -76,8 +78,7 @@ export default function RootLayout() {
             <Stack.Screen name="(aux)/BecomeWorker/ProfessionalInfo" options={{ title: "Professional Infomation" }} />
             <Stack.Screen name="(aux)/BecomeWorker/AddtionalPersonalInfo" options={{ title: "Addtional Infomation" }} />
 
-            <Stack.Screen name="(auth)/SignIn" options={{ headerShown: false }} />
-            <Stack.Screen name="(auth)/SignUp" options={{ headerShown: false }} />
+         
             <Stack.Screen name="+not-found" />
           </Stack>
         </SafeAreaProvider>

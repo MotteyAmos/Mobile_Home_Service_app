@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Text,
   View,
@@ -20,7 +20,6 @@ interface OutLineButtonWithArrowProps {
 const OutLineButtonWithArrow = (props: OutLineButtonWithArrowProps) => {
   const [chageNextText, setChangeNextText] = useState<boolean>(false);
   const [translateXValue] = useState(new Animated.Value(0)); // Animated value for translation
-
   // animate the arrow
   const animateArrow = () => {
     const animationLoop = Animated.loop(
@@ -46,9 +45,7 @@ const OutLineButtonWithArrow = (props: OutLineButtonWithArrowProps) => {
 
   const onPress = ()=>{
     setChangeNextText(true);
-    console.log(chageNextText);
-
-    chageNextText &&  router.replace(props.href);
+    router.replace(props.href);
     
   }
   return (
@@ -56,13 +53,16 @@ const OutLineButtonWithArrow = (props: OutLineButtonWithArrowProps) => {
       style={({ pressed }) => [
         {
           backgroundColor: pressed ? "#083344" : "white",
+          
         },
         styles.container,
       ]}
       onPress={onPress}
       
+      
     >
       <Text
+   
         style={[
           {
             color: chageNextText ? "#fff" : "#083344",

@@ -1,6 +1,6 @@
 import { View, Text, Pressable, Button, StyleSheet, Animated } from "react-native";
 import { Image } from 'expo-image';
-import OutLineButtonWithArrow from "../components/buttons/OutlineButtonWithArrow"
+import OutLineButtonWithArrow from "@/components/buttons/OutlineButtonWithArrow";
 import {useRouter} from "expo-router";
 
 
@@ -40,7 +40,7 @@ export default function WelcomePage() {
 
             <View style={{ width: "100%", position: "absolute", bottom: 50, flex: 0, alignItems: "flex-end", paddingRight: 16 }}>
              
-                    <OutLineButtonWithArrow title="Next" href="(auth)/SignIn"/>
+                    <OutLineButtonWithArrow title="Next" href="/(auth)/SignIn"/>
 
             </View>
 

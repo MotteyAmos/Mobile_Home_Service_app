@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Text, View, StyleSheet, TextInput, KeyboardAvoidingView,Platform , ScrollView} from 'react-native';
+import { useEffect, useState } from 'react';
+import { Text, View, StyleSheet, TextInput, KeyboardAvoidingView,Platform , ScrollView, Keyboard} from 'react-native';
 import Entypo from "@expo/vector-icons/Entypo";
 import Feather from "@expo/vector-icons/Feather"
 import Ionicons from "@expo/vector-icons/Ionicons"
@@ -11,8 +11,10 @@ interface ProfileProps { }
 const Profile = (props: ProfileProps) => {
   const [messageValue, setMessageValue] = useState<string>("");
   const [inputBorder, setInputBorder] = useState<boolean>(false);
+
+
   return (
-    <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : "height"} keyboardVerticalOffset={60} >
+    <KeyboardAvoidingView style={{ flex: 1}} behavior={Platform.OS === 'ios' ? 'padding' : undefined} keyboardVerticalOffset={100} >
     <View style={styles.container}>
       <View style={{
         flex:8,
